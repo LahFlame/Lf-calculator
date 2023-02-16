@@ -1,0 +1,16 @@
+.button{
+    min-width: 4rem;
+    display: flex;
+    flex: 1 0 24%;
+
+    button{
+        height: 5rem;
+        flex-grow: 1;
+        font-weight: 550;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    
+}

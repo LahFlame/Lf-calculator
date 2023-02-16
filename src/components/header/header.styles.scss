@@ -1,0 +1,20 @@
+.header{
+    background-color: rgb(36, 35, 35);
+    padding: 1rem 0;
+    text-align: center;
+    margin: 0 20%;
+    border-radius: 30px;
+    color: aliceblue;
+    
+    h1{
+        font-family: 'Bigelow Rules', cursive;
+        font-weight: 900;
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 495px){
+    .header{
+        margin: 0 1%;
+    }
+}
