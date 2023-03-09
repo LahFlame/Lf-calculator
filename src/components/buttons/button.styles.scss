@@ -1,10 +1,10 @@
 .button{
-    min-width: 4rem;
+    
     display: flex;
     flex: 1 0 24%;
 
     button{
-        height: 5rem;
+        height: 3rem;
         flex-grow: 1;
         font-weight: 550;
 
@@ -12,5 +12,19 @@
             cursor: pointer;
         }
     }
+    &:last-child button{
+        height: 4rem;
+        background-color: rgb(37, 141, 226);
+    }
+    &:nth-last-child(2) button{
+        height: 4rem;
+        
+    }
     
+    &:nth-child(4) button{
+        background-color: rgb(233, 49, 49);
+    }
+    &:nth-last-col{
+        margin-left: 10px;
+    }
 }

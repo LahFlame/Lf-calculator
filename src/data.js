@@ -12,6 +12,10 @@
         value: "3"
     },
     {
+        id: 14,
+        value: "C"
+    },
+    {
         id: 4,
         value: "4"
     },
@@ -22,6 +26,10 @@
     {
         id: 6,
         value: "6"
+    },
+    {
+        id: 16,
+        value: "←"
     },
     {
         id: 7,
@@ -36,34 +44,35 @@
         value: "9"
     },
     {
+        id: 12,
+        value: "x"
+    },
+    {
+        id:17,
+        value: "."
+    },
+    {
         id: 0,
         value: "0"
     },
+
     {
-        id: 10,
-        value: "+"
+        id: 13,
+        value: "÷"
     },
     {
         id: 11,
         value: "-"
     },
     {
-        id: 12,
-        value: "x"
-    },
-    {
-        id: 13,
-        value: "÷"
-    },
-    {
-        id: 14,
-        value: "c"
+        id: 10,
+        value: "+"
     },
     {
         id: 15,
         value: "="
-    }
-
+    },
+    
 
 ]
 

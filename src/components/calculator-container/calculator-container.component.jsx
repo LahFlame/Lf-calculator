@@ -31,6 +31,15 @@ class CalculatorContainer extends React.Component {
                 sign: sign
             })
         }
+        if(buttonChar === "." && !inputNum.includes(".") ){
+            this.setState({
+                result: result, 
+                inputNum: inputNum + buttonChar,
+                displayResult: false,
+                displayNum: true,
+                sign: sign
+            })
+        }
         if(buttonChar === "+"){
             this.setSign(result,inputNum,displayResult,displayNum,"+");
             if(result === ""){
@@ -79,17 +88,20 @@ class CalculatorContainer extends React.Component {
                 }
             }
         }
-        if(buttonChar === "c"){
+        if(buttonChar === "C"){
             this.setState({
                 result: "",
                 inputNum: "",
                 displayResult: false,
                 displayNum: false,
                 sign: ""
-            },() => console.log(this.state))
+            })
         }
         if(buttonChar === "="){
             this.prevDataCalc(result,inputNum,sign)
+        }
+        if(buttonChar === "←"){
+            this.handleDel(inputNum);
         }
 
     }
@@ -187,7 +199,7 @@ class CalculatorContainer extends React.Component {
                 }
                 subtractFunc = (result,inputNum,sign) => {
                     this.setState({
-                        result: result - Number(inputNum),
+                        result:  result - Number(inputNum),
                         inputNum: "",
                         displayResult: true,
                         displayNum: false,
@@ -196,7 +208,7 @@ class CalculatorContainer extends React.Component {
                 }
                 multiplyFunc = (result,inputNum,sign) => {
                     this.setState({
-                        result: result * Number(inputNum),
+                        result:  result * Number(inputNum),
                         inputNum: "",
                         displayResult: true,
                         displayNum: false,
@@ -205,11 +217,20 @@ class CalculatorContainer extends React.Component {
                 }
                 divideFunc = (result,inputNum,sign) => {
                     this.setState({
-                        result: result / Number(inputNum),
+                        result:  result / Number(inputNum),
                         inputNum: "",
                         displayResult: true,
                         displayNum: false,
                         sign: sign
+                    })
+                }
+                handleDel  = (inputNum) => {
+                  
+                    const lastPosition = inputNum.length-1;
+                    this.setState((prevState) => {
+                        return ({
+                            ...prevState,
+                            inputNum: inputNum.slice(0,lastPosition)})
                     })
                 }
             

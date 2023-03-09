@@ -3,7 +3,7 @@ import "./button-container.styles.scss"
 import data from "../../data";
 import Button from "../buttons/button.component";
 
-const ButtonContainer = ({handleClick,displayResult,displayNum}) => {
+const ButtonContainer = ({handleClick}) => {
     return(
         <section className="button-container">
             {
